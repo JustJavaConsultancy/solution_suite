@@ -4,89 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22907801-1390-43ad-821b-86cd17dedf34" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/compose.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/BookKeepingApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/AbstractAuditableRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/AbstractPersistableRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/ChartOfAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/ChartOfAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/GLAccount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/GLAccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/GLHeader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/GLHeaderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/Journal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/JournalLine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/JournalLineRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/JournalRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/Organization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/OrganizationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/entityListener/GLAccountListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/entityListener/JournalListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/valueObject/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/db/view/TrialBalanceView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/rest/AccountingREST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/rest/ReportREST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/services/AccountPosting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/services/ReportInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/services/impl/AccountPostingImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/java/ng/com/justjava/bookkeeping/services/impl/ReportInterfaceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book-keeping/src/test/java/ng/com/justjava/bookkeeping/BookKeepingApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/Application.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/db/RuleDbModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/db/RulesRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/db/valueObject/Money.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/domain/KnowledgeBaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/domain/Rule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/domain/RuleNamespace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/dslResolver/DSLKeywordResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/dslResolver/DSLResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/dslResolver/impl/BankResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/parser/DSLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/parser/DSLPatternUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/parser/MVELParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/parser/RuleParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/rest/RuleEngineRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/InferenceEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/RuleEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/rulesImpl/accountingRule/AccountingDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/rulesImpl/accountingRule/AccountingInferenceEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/rulesImpl/accountingRule/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/ruleEngine/rulesImpl/accountingRule/TransactionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/rulesImpl/loanRuleEngine/LoanDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/rulesImpl/loanRuleEngine/LoanInferenceEngine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/ng/com/justjava/rulesImpl/loanRuleEngine/UserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/test/ng/com/justjava/DSLPatternTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rule-engine/src/test/ng/com/justjava/RuleEngineTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" afterDir="false" />
+    <list default="true" id="22907801-1390-43ad-821b-86cd17dedf34" name="Changes" comment="Initial Version">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +25,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/book-keeping" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
@@ -150,7 +70,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "088e44aaf8df00b3bd9c602823ad3cfe",
     "vue.rearranger.settings.migration": "true"
   },
@@ -294,8 +214,16 @@
       <workItem from="1708082500664" duration="1261000" />
       <workItem from="1708091845237" duration="18747000" />
       <workItem from="1708449016996" duration="4666000" />
-      <workItem from="1708463880169" duration="18192000" />
+      <workItem from="1708463880169" duration="19323000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Version">
+      <created>1708642391059</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708642391059</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +242,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/book-keeping" />
+    </ignored-roots>
+    <MESSAGE value="Initial Version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
