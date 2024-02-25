@@ -4,14 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22907801-1390-43ad-821b-86cd17dedf34" name="Changes" comment="Initial Version">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="22907801-1390-43ad-821b-86cd17dedf34" name="Changes" comment="Added Integrator Module">
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book-keeping/glaccount.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/integrator">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,9 +80,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "com.google.cloudcode.ide_session_index": "20240220_0003",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Java/jdk-21.0.2",
+    "com.google.cloudcode.ide_session_index": "20240225_0001",
+    "database.data.extractors.current.export.id": "Comma-separated (CSV)_id",
+    "jdk.selected.JAVA_MODULE": "21",
+    "last_opened_file_path": "C:/workspace/common-project/common-module/book-keeping",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -71,7 +93,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "spring.configuration.checksum": "088e44aaf8df00b3bd9c602823ad3cfe",
+    "spring.configuration.checksum": "00be9d1a2bdd9aa1e1f9c180bdaa3da5",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -171,12 +193,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegratorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="integrator" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ng.com.justjava.integrator.IntegratorApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.All in book-keeping" />
       <item itemvalue="JUnit.All in rule-engine" />
       <item itemvalue="JUnit.All in rule-engine (1)" />
       <item itemvalue="JUnit.All in rule-engine (2)" />
       <item itemvalue="JUnit.RuleEngineTest" />
+      <item itemvalue="Spring Boot.IntegratorApplication" />
       <item itemvalue="Spring Boot.BookKeepingApplication" />
       <item itemvalue="Spring Boot.Application" />
     </list>
@@ -214,7 +244,8 @@
       <workItem from="1708082500664" duration="1261000" />
       <workItem from="1708091845237" duration="18747000" />
       <workItem from="1708449016996" duration="4666000" />
-      <workItem from="1708463880169" duration="19323000" />
+      <workItem from="1708463880169" duration="21904000" />
+      <workItem from="1708855833414" duration="761000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Version">
       <created>1708642391059</created>
@@ -223,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708642391059</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added the book-keeping module">
+      <created>1708645014148</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708645014148</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added Integrator Module">
+      <created>1708856161762</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708856161762</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,9 +289,12 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/book-keeping" />
+      <path value="$PROJECT_DIR$/integrator" />
     </ignored-roots>
     <MESSAGE value="Initial Version" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Version" />
+    <MESSAGE value="Added the book-keeping module" />
+    <MESSAGE value="Added Integrator Module" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Integrator Module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

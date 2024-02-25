@@ -1,0 +1,4 @@
+id,balance,budgeted,code,description,name,chart_of_account_id,parent_id,gl_header_id
+2,"{""amount"": 28000000, ""currency"": ""N""}","{""amount"": 0.0, ""currency"": ""N""}",0021,Savings GL Account,DEPOSIT,52,,2
+1,"{""amount"": -245000.0, ""currency"": ""N""}","{""amount"": 0.0, ""currency"": ""N""}",0011,Cash GL Account,CASH,52,,1
+52,"{""amount"": 3000.0, ""currency"": ""N""}","{""amount"": 500000.0, ""currency"": ""N""}",00111,Petty Cash Account,PETTY_CASH,52,1,2

@@ -22,5 +22,6 @@
   <modules>
     <module>rule-engine</module>
     <module>book-keeping</module>
+    <module>integrator</module>
   </modules>
 </project>
