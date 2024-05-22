@@ -10,9 +10,11 @@ import ng.com.justjava.bookkeeping.db.entityListener.JournalListener;
 import ng.com.justjava.bookkeeping.db.valueObject.Money;
 import org.hibernate.annotations.JdbcTypeCode;
 import org.hibernate.type.SqlTypes;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
 
 @Data
@@ -39,9 +41,13 @@ public class Journal {
     Organization organization;
 
 
+
     @OneToMany(mappedBy = "journal", cascade = CascadeType.ALL, orphanRemoval = true)
+    @RestResource(exported = false)
     private Set<JournalLine> journalLines = new LinkedHashSet<>();
 
+    @JdbcTypeCode(SqlTypes.JSON)
+    private Map<String,String> metaData;
     public void addJournalLine(JournalLine journalLine){
         journalLine.setJournal(this);
         if(journalLines==null)

@@ -39,6 +39,7 @@ public class GLAccount {
     @JoinColumn(name = "chart_of_account_id")
     private ChartOfAccount chartOfAccount;
 
+
     @JdbcTypeCode(SqlTypes.JSON)
     Money budgeted;
     String description;

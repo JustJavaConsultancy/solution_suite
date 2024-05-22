@@ -24,6 +24,7 @@ public class ChartOfAccount {
     @JoinColumn(name = "organization_id")
     private Organization organization;
 
+
     @OneToMany(mappedBy = "chartOfAccount")
     private Set<GLAccount> gAccounts = new LinkedHashSet<>();
 

@@ -23,5 +23,6 @@
     <module>rule-engine</module>
     <module>book-keeping</module>
     <module>integrator</module>
+      <module>coached</module>
   </modules>
 </project>

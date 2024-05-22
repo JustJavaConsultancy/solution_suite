@@ -13,6 +13,7 @@ import org.springframework.data.rest.core.config.Projection;
 @NoArgsConstructor*/
 public interface TrialBalanceView {
     Long getId();
+    String getCode();
     String getName();
     Double getBalance();
 }

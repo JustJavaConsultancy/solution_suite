@@ -3,7 +3,6 @@ package ng.com.justjava.bookkeeping.rest;
 import ng.com.justjava.bookkeeping.services.AccountPosting;
 import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.AccountingDetails;
 import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.TransactionDetails;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,6 +17,12 @@ public class AccountingREST {
     public ResponseEntity<?> postTransactionDetails(@RequestBody TransactionDetails transactionDetails) {
         System.out.println(" ENtering here.............");
         AccountingDetails result = accountPosting.post(transactionDetails);
+        return ResponseEntity.ok(result);
+    }
+    @PostMapping(value = "/manualaccounting")
+    public ResponseEntity<?> postTransactionDetails(@RequestBody AccountingDetails accountingDetails) {
+        System.out.println(" ENtering here.............");
+        AccountingDetails result = accountPosting.post(accountingDetails);
         return ResponseEntity.ok(result);
     }
 }

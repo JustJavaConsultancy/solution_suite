@@ -1,58 +1,75 @@
 package ng.com.justjava.bookkeeping.services.impl;
 
+import ng.com.justjava.bookkeeping.Exception.GLAccountNotFoundException;
 import ng.com.justjava.bookkeeping.db.*;
 import ng.com.justjava.bookkeeping.db.valueObject.Money;
+import ng.com.justjava.bookkeeping.rest.feignclient.RuleClient;
 import ng.com.justjava.bookkeeping.services.AccountPosting;
 import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.AccountingDetails;
 import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.TransactionDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestClient;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
-
-import static org.springframework.http.MediaType.APPLICATION_JSON;
+import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class AccountPostingImpl implements AccountPosting {
 
+    @Autowired
+    private RuleClient ruleClient;
     @Autowired
     private JournalRepository journalRepository;
     @Autowired
     private GLAccountRepository glAccountRepository;
     @Override
     public AccountingDetails post(TransactionDetails transactionDetails) {
-        RestClient restClient = RestClient.create();
-        AccountingDetails response = restClient.post()
-                .uri("http://localhost:8081/accounting")
-                .contentType(APPLICATION_JSON)
-                .body(transactionDetails)
-                .retrieve()
-                .body(AccountingDetails.class);
-        System.out.println(" The response content  :"+response);
+        AccountingDetails response = ruleClient.details(transactionDetails);
+        if(response==null)
+            return AccountingDetails.builder().build();
+
+        return createJournal(response);
+
+    }
+
+    @Override
+    public AccountingDetails post(AccountingDetails accountingDetails) {
+        return createJournal(accountingDetails);
+    }
+
+    private AccountingDetails createJournal(AccountingDetails accountingDetails){
         Journal journal=Journal.builder().dateTimeCreated(LocalDateTime.now())
-                .amount(new Money("N",response.getTransactionAmount()))
+                .amount(new Money("N",accountingDetails.getTransactionAmount()))
                 .organization(null)
                 .transReference(String.valueOf(System.nanoTime()))
-                .narration(response.getNarration())
+                .metaData(accountingDetails.getMetData())
+                .narration(accountingDetails.getNarration())
                 .build();
 
         HashSet<JournalLine> journalLines = new HashSet<>();
 
 
-        for (Map line:response.getLines()) {
+        for (Map line:accountingDetails.getLines()) {
             JournalLine journalLine = new JournalLine();
+
+            System.out.println("String.valueOf(line.get(\"glCode\"))===== "
+            + String.valueOf(line.get("glCode")));
             Optional<GLAccount> glAccount = glAccountRepository.findByCode(String.valueOf(line.get("glCode")));
+            if (!glAccount.isPresent()){
+                throw new GLAccountNotFoundException("GL Account Not Found ("+line.get("glCode")+")");
+            }
+
+
             journalLine.setCurrentBalance(glAccount.get().getBalance());
             System.out.println(" line.get(\"amount\")===== "+ line.get("amount"));
-            Double amount = (Double) line.get("amount");
+            Double amount = Double.valueOf(String.valueOf(line.get("amount")));
+            //Double amount = (Double) line.get("amount");
             System.out.println(" amount=========="+amount);
             Money transAmount = new Money("N", amount);
             if (String.valueOf(line.get("action")).equalsIgnoreCase("credit")) {
-
                 journalLine.setCredit(transAmount);
                 glAccount.get().getBalance().addMoney(transAmount);
             }else {
@@ -60,13 +77,15 @@ public class AccountPostingImpl implements AccountPosting {
                 glAccount.get().getBalance().substractMoney(transAmount);
             }
             journalLine.setGlAccount(glAccount.get());
+            journalLine.setComment(String.valueOf(line.get("comment")));
             //journalLines.add(journalLine);
             glAccountRepository.save(glAccount.get());
             journal.addJournalLine(journalLine);
         }
         //journal.setJournalLines(journalLines);
         journalRepository.save(journal);
-        return response;
+        return accountingDetails;
 
     }
+
 }
