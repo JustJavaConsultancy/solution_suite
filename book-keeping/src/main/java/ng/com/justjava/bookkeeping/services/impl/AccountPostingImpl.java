@@ -3,10 +3,10 @@ package ng.com.justjava.bookkeeping.services.impl;
 import ng.com.justjava.bookkeeping.Exception.GLAccountNotFoundException;
 import ng.com.justjava.bookkeeping.db.*;
 import ng.com.justjava.bookkeeping.db.valueObject.Money;
+import ng.com.justjava.bookkeeping.dto.AccountingDetails;
+import ng.com.justjava.bookkeeping.dto.TransactionDetails;
 import ng.com.justjava.bookkeeping.rest.feignclient.RuleClient;
 import ng.com.justjava.bookkeeping.services.AccountPosting;
-import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.AccountingDetails;
-import ng.com.justjava.ruleEngine.rulesImpl.accountingRule.TransactionDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Optional;
-import java.util.concurrent.atomic.AtomicReference;
 
 @Service
 public class AccountPostingImpl implements AccountPosting {

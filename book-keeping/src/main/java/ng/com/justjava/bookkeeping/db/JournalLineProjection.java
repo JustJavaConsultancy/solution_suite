@@ -1,6 +1,6 @@
 package ng.com.justjava.bookkeeping.db;
 
-import ng.com.justjava.db.valueObject.Money;
+import ng.com.justjava.bookkeeping.db.valueObject.Money;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.rest.core.config.Projection;
 
